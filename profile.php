@@ -1,7 +1,14 @@
 <?php
 	
 	session_start();
-  	$user = $_SESSION['user'];
+
+	if(!empty($_SESSION['user'])){
+		$user = $_SESSION['user'];
+	}
+	else{
+		header("location:login.php");
+	}
+  	
 
 ?>
 <!DOCTYPE html>

@@ -1,3 +1,7 @@
+<?php
+	session_start();
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,17 +11,39 @@
 </head>
 <body>
 
+	<?php
+		require_once("config/autoload.php");
+	?>
+
 	<div class="maxcontainer">
 		
 		<?php
 			
 			require_once "views/header.php";
 			require_once "views/nav.php";
+
+			require_once "models/Usuario.php";
+			use models\Usuario as Usuario;
+			
+
+			$julian = new Usuario("Julian", "julmdq@live.com.ar", "12345", 21, 1.73, 75, "m");
+
 			
 		?>
 		
 		<section>
 			
+			<?php
+
+				if(!empty($_SESSION['user'])){
+
+					echo $_SESSION['user'];
+				}
+				else{
+					echo "Bienvenido";
+				}
+
+			?>
 			
 		</section>
 

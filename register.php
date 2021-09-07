@@ -18,6 +18,32 @@
 		
 		<section>
 			
+			<form action="controllers/registerController.php" method="POST">
+				
+				<table>
+					
+					<tr>
+						<td><input type="text" name="user" placeholder="Username" required></td>
+						<td><input type="text" name="email" placeholder="Email" required></td>
+
+					</tr>
+					<tr>
+						
+						<td><input type="number" name="age" placeholder="Age"></td>
+						<td><input type="number" name="height" placeholder="Height"></td>
+
+					</tr>
+					<tr>
+						
+						<td><input type="number" name="weight" placeholder="Weight"><br></td>
+						<td><input type="password" name="password" placeholder= "Password" required><br></td>
+
+					</tr>
+				</table>
+				
+				<button type="submit">Send</button><br>
+
+			</form>
 			
 		</section>
 
